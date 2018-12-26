@@ -2,8 +2,10 @@
 
 **************************************************************************************************************
 #Team : Team.Cube 
+#Game Title : Cubric Fight!
+#Project Begin : 2018/09/07
+#Publish : (Under Developement)
 #Member : 1 Game Designer, 3 Programmer 
-#Title : Cubric Fight! 
 #Genre : 3D strategy action board game
 
 한줄 요약을 하면 알까기 게임을 생각하시면 될 것 같습니다.
