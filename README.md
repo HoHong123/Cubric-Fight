@@ -1,64 +1,67 @@
 # Cubric Fight!
 **************************************************************************************************************
 <article>
-#Team : Team.Cube 
-#Game Title : Cubric Fight!
-#Project Begin : 2018/09/07
-#Publish : (Under Developement)
-#Member : 1 Game Designer, 3 Programmer 
-#Genre : 3D strategy action board game
+#Team : Team.Cube<br>
+#Game Title : Cubric Fight!<br>
+#Genre : 3D strategy action board game<br>
+#Member : 1 Game Designer, 3 Programmer <br>
+#Production Period : 2018/09/07<br>
+#Publish : (Under Developement)<br>
 </article>
 
 <body>
-  <h1>Description</h1>
-</body>
-
-<body>
-  <h1>요약</h1>
+  <h2>요약</h2>
   <div>
+    <span><img src="image/attack.png" width="45%"><img src="image/attack2.png" width="45%"></span>
     <p>
-      한줄 요약을 하면 알까기 게임을 생각하시면 될 것 같습니다.
-      상대를 밀어 맵 밖으로 보내는 기본 알까기와는 달리 캐릭터를 밀어서 나오는 속도에 비례하여 데미지를 주고 적의 체력이 0이
-      되면 죽게하여 모든 적을 처리하면 이기는 게임입니다. 작성자는 이 프로젝트에 "보스대전" 컨텐츠의 보스의 AI에 유한행동기계와
-      맵 디자인 및 레벨 디자인을 제작 및 관리하였습니다.
+      간단한 보드형 모바일 게임을 제작하는 것을 목표로한 프로젝트입니다. 알까기와 유사한 이 보드게임은 상대를 밀어 맵 밖으로 보내는 것이 아닌 캐릭터를 날려 속도에 비례하여 적과 충돌하여 데미지를 주거나 각 캐릭터 고유의 스킬을 활용하여 데미지나 전략적 우의를 차지하여 적의 체력이 고갈시켜 적을 모두 처치하면 이기는 게임입니다.
     </p>
+    <span><p><img src="image/character.png" width="25%" align="right">
+      각 <b>캐릭터는 고유 스킬들은 범위공격, 장애물 설치 등</b>과 같은 효과가 있으며 <b>필요에 따라 전략적이게 사용 가능</b>하기 때문에 단순한 힘의 조절만으로 하는 게임에서 좀더 전략성을 추구하였습니다. 또한 <b>각 플레이어는 동작 가능 횟수(Cost)가 주어지며</b> 이를 통해 <b>매 동작에 신중</b>해질 것이며 유니티에서 사용가능한 <b>네트워크 서버인 포톤(Photon)</b>을 활용하여 <b>1대1대전</b>이 가능하도록 하였습니다.<br><br>
+      작성자는 이 프로젝트에 <b>"보스대전" 컨텐츠</b>의 보스의 AI에 <b>유한행동기계와 맵 디자인 및 레벨 디자인</b>을 제작 및 관리하였습니다.
+    </p></span>
   </div>
   
-  <h1>주요 제작 요소</h1>
+  <h2>주요 제작 요소</h2>
   <div>
     <ol>
-      <li><b>보스캐릭터 행동기계 제작</b><br>
-      - <br>
+      <li><b>보스 컨트롤러</b><br>
+        <p>
+      - 보스 캐릭터의 기본적인 스탯과 추가적 생성할 보스들에게도 공통적으로 반드시 필요한 변수와 함수를 추상클래스로 구현한 컨트롤러를 제작하였습니다. 또한 충돌하면 반대의 각도로 다시 튕겨내기 위해 반사 벡터를 연산하여 체스를 튕겨내는 간단한 연산정도가 포함되어 있습니다.(OrcChif_AI.cs)<br>
+        </p>
       <img src="Image/.png" width="50%"><br>
       </li>
       <br>
-      <li><b>패럴렉스 배경 생성</b><br>
-      - <br>
+      <li><b>보스 유한행동기계 제작</b><br>
+        <p>보스는 총 3가지의 공격 패턴을 지니고 있습니다.</p><br>
+        <ul>
+          <li>근접 공격<br>
+            <p>
+          - 플레이어의 캐릭터가 근접공격 범위 안에 존재하면 전/후/좌/우 중 캐릭터가 존재하는 위치의 90도 범위를 공격합니다.<br>
+          - 만일 전/후/좌/우 중 다방향에 캐릭터가 골고루 존재한다면 데이터를 종합하여 그 중 랜덤하게 한 방향을 공격합니다.<br>
+            </p>
+          <img src"" width="80%">
+          </li>
+          <li>원거리 공격<br>
+          <p>- 플레이어의 캐릭터가 근접공격 범위 밖에 존재하면 범위 밖 캐릭터 중 하나에 랜덤으로 세로 혹은 가로방향으로 공격합니다.</p><br>
+          <img src"" width="80%">
+          <img src"" width="80%">
+          <img src"" width="80%">
+          </li>
+          <li>운석 공격<br>
+          <p>- 보스의 체력이 1/4로 떨어지면 발생되는 패턴으로 <b>5개의 운석을 소환하여 범위 피해</b>를 줍니다.</p><br>
+          <img src"" width="80%">
+          <p>- <b>생존한 플레이어 캐릭 중 하나</b>와 <b>서로 겹치지 않는 랜덤한 위치 4곳</b>에 떨어집니다.</p><br>
+          <img src"" width="80%">
+          <p>- 각 운석은 떨어지는 딜레이가 달라 플레이어가 육안으로 먼저 피해야하는 곳을 알아보도록 원형 타이머를 시각화하여 피할 수 있도록 하였습니다.</p><br>
+          <img src"" width="80%">
+          </li>
+        </ul>
+        <p>
+        위 세가지 패턴을 지정된 시간마다 번갈아가며 발동합니다.<br>
+        예를들어 근접+원거리 공격을 30초정도 반복하며 30초가 지나면 운석 패턴을 10초동안 활성화 시키는 방식으로 행동기계를 작성하였습니다.<br>
+        </p>
       <img src="Image/.png" width="50%"><br>
-      </li>
-      <br>
-      <li><b>적 AI 생성</b><br>
-      - <br>
-      <img src="Image/.png" width="50%"><br>
-      </li>
-      <br>
-      <li><b>타일맵 생성</b><br>
-      - <br>
-      <img src="Image/.png" width="50%"><br>
-      </li>
-      <br>
-      <li><b>옵션을 통한 사운드 컨트롤</b><br>
-      - <br>
-      <img src="Image/.png" width="50%"><br>
-      </li>
-      <br>
-      <li><b>각종 게임 씬 제작</b><br>
-      - <br>
-      <img src="Image/.png" width="50%"><br>
-      </li>
-      <br>
-      <li><b>사이툴을 통한 그래픽 제작</b><br>
-      - <br>
       </li>
     </ol>
   </div>
