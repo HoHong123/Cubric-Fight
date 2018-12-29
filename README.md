@@ -66,11 +66,13 @@
           - 만일 전/후/좌/우 중 다방향에 캐릭터가 골고루 존재한다면 데이터를 종합하여 그 중 랜덤하게 한 방향을 공격합니다.<br>
             <img src="image/rangeDetect.png" width="40%">
             </p>
+            <img src="image/hitgif.gif" width="40%"><br>
           </li>
           <li><h5>원거리 공격</h5>
           <p>- 플레이어의 캐릭터가 근접공격 범위 밖에 존재하면 범위 밖 캐릭터 중 하나에 랜덤으로 세로 혹은 가로방향으로 공격합니다.</p><br>
           <img src="image/rangeReady.PNG" width="80%">
           <img src="image/rangeAttack.PNG" width="80%">
+          <img src="image/rangehitgif.gif" width="40%"><br>
           </li>
           <li><h5>운석 공격</h5>
           <p>- 보스의 체력이 1/4로 떨어지면 발생되는 패턴으로 <b>5개의 운석을 소환하여 범위 피해</b>를 줍니다.</p><br>
@@ -79,6 +81,7 @@
           <img src="image/meteorReady.PNG" width="80%">
           <img src="image/meteorDrop.PNG" width="80%">
           <img src="image/meteorHit.PNG" width="80%">
+          <img src="image/meteorhitgif.gif" width="40%"><br>
           </li>
         </ul>
         <p>
