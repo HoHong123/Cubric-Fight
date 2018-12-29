@@ -90,7 +90,7 @@
   
   <h2>게임 영상</h2>
   
-  [![Cubric Fight](image/orc1.png)](image/Cube.mp4)
+  [![Cubric Fight](image/orc1.png)](https://www.youtu.be/1Q3MLAJqPR8)
   
   <br>
 </body>
