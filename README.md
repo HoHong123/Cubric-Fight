@@ -44,9 +44,7 @@
   <div>
     <ol>
       <li><h3>보스 컨트롤러</h3><br>
-        <p>
       - 보스 캐릭터의 기본적인 스탯과 추가적 생성할 보스들에게도 공통적으로 반드시 필요한 변수와 함수를 추상클래스로 구현한 컨트롤러를 제작하였습니다. 또한 충돌하면 반대의 각도로 다시 튕겨내기 위해 반사 벡터를 연산하여 체스를 튕겨내는 간단한 연산정도가 포함되어 있습니다.(OrcChif_AI.cs)<br>
-        </p>
         <span>
           <img src="image/ready.png" width="80%">
           <img src="image/hit.gif" width="50%">
@@ -54,10 +52,9 @@
       </li>
       <br>
       <li><h3>보스 유한행동기계 제작</h3><br>
-        <p>보스는 총 3가지의 공격 패턴을 지니고 있습니다.</p><br>
+        보스는 총 3가지의 공격 패턴을 지니고 있습니다.<br>
         <ul>
           <li><h5>근접 공격</h5>
-            <p>
           - 플레이어의 캐릭터가 근접공격 범위 안에 존재하면 전/후/좌/우 중 캐릭터가 존재하는 위치의 90도 범위를 공격합니다.<br>
               <span>
                 <img src="image/meleeDetect.PNG" width="40%" height="200px">
@@ -65,19 +62,18 @@
               </span><br>
           - 만일 전/후/좌/우 중 다방향에 캐릭터가 골고루 존재한다면 데이터를 종합하여 그 중 랜덤하게 한 방향을 공격합니다.<br>
             <img src="image/rangeDetect.png" width="40%">
-            </p>
             <img src="image/hitgif.gif" width="40%"><br>
           </li>
           <li><h5>원거리 공격</h5>
-          <p>- 플레이어의 캐릭터가 근접공격 범위 밖에 존재하면 범위 밖 캐릭터 중 하나에 랜덤으로 세로 혹은 가로방향으로 공격합니다.</p><br>
+          - 플레이어의 캐릭터가 근접공격 범위 밖에 존재하면 범위 밖 캐릭터 중 하나에 랜덤으로 세로 혹은 가로방향으로 공격합니다.<br>
           <img src="image/rangeReady.PNG" width="80%">
           <img src="image/rangeAttack.PNG" width="80%">
           <img src="image/rangehitgif.gif" width="40%"><br>
           </li>
           <li><h5>운석 공격</h5>
-          <p>- 보스의 체력이 1/4로 떨어지면 발생되는 패턴으로 <b>5개의 운석을 소환하여 범위 피해</b>를 줍니다.</p><br>
-          <p>- <b>생존한 플레이어 캐릭 중 하나</b>와 <b>서로 겹치지 않는 랜덤한 위치 4곳</b>에 떨어집니다.</p><br>
-          <p>- 각 운석은 떨어지는 딜레이가 달라 플레이어가 육안으로 먼저 피해야하는 곳을 알아보도록 원형 타이머를 시각화하여 피할 수 있도록 하였습니다.</p><br>
+          - 보스의 체력이 1/4로 떨어지면 발생되는 패턴으로 <b>5개의 운석을 소환하여 범위 피해</b>를 줍니다.<br>
+          - <b>생존한 플레이어 캐릭 중 하나</b>와 <b>서로 겹치지 않는 랜덤한 위치 4곳</b>에 떨어집니다.<br>
+          - 각 운석은 떨어지는 딜레이가 달라 플레이어가 육안으로 먼저 피해야하는 곳을 알아보도록 원형 타이머를 시각화하여 피할 수 있도록 하였습니다.<br>
           <img src="image/meteorReady.PNG" width="80%">
           <img src="image/meteorDrop.PNG" width="80%">
           <img src="image/meteorHit.PNG" width="80%">
@@ -93,9 +89,6 @@
   </div>
   
   <h2>게임 영상</h2>
-  <video controls>
-    <source src="image/Cube.mp4" type="video/mp4">
-    The browser does not support the video.
-  </video>
+  <video src="image/Cube.mp4" width="50%" controls></video>
   <br>
 </body>
