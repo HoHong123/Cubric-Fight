@@ -89,6 +89,8 @@
   </div>
   
   <h2>게임 영상</h2>
-  <video src="image/Cube.mp4" width="50%" controls></video>
+  
+  [![Cubric Fight](image/orc1.png)](image/Cube.mp4)
+  
   <br>
 </body>
