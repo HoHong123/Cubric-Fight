@@ -17,10 +17,15 @@
       간단한 <b>모바일 보드 게임</b>을 제작하는 것을 목표로한 프로젝트입니다.<br>
       알까기와 유사한 이 보드게임은 상대를 밀어 맵 밖으로 보내는 것이 아닌 캐릭터를 날려 속도에 비례하여 적과 충돌하여 데미지를 주거나 각 캐릭터 고유의 스킬을 활용하여 데미지나 전략적 우의를 차지하여 적의 체력이 고갈시켜 적을 모두 처치하면 이기는 게임입니다.
     </p>
-    <span><img src="image/skill1.png" width="30%" height="190px"><img src="image/skill2.png" width="30%" height="190px"></span>
-    <span><p><img src="image/character.png" width="18%" align="right">
+    <span>
+      <img src="image/skill1.png" width="40%" height="300px">
+      <img src="image/skill2.png" width="40%" height="300px">
+    </span>
+    <span><p>
+      <img src="image/character.png" width="20%" align="right" style="padding-left:10%">
       각 <b>캐릭터는 고유 스킬들은 범위공격, 장애물 설치 등</b>과 같은 효과가 있으며 <b>필요에 따라 전략적이게 사용 가능</b>하기 때문에 단순한 힘의 조절만으로 하는 게임에서 좀더 전략성을 추구하였습니다. 또한 <b>각 플레이어는 동작 가능 횟수(Cost)가 주어지며</b> 이를 통해 <b>매 동작에 신중</b>해질 것이며 유니티에서 사용가능한 <b>네트워크 서버인 포톤(Photon)</b>을 활용하여 <b>1대1대전</b>이 가능하도록 하였습니다.<br>
     </p></span>
+    <br><br><br>
     <p>
       작성자는 이 프로젝트에 <b>"보스대전" 컨텐츠</b>의 보스의 AI에 <b>유한행동기계와 맵 디자인 및 레벨 디자인</b>을 제작 및 관리하였습니다.
     </p>
