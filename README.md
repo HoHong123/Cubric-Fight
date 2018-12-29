@@ -91,6 +91,11 @@
       </li>
     </ol>
   </div>
+  
   <h2>게임 영상</h2>
-  <img src="Image/GamePlay.gif" width="100%"><br>
+  <video controls>
+    <source src="image/Cube.mp4" type="video/mp4">
+    The browser does not support the video.
+  </video>
+  <br>
 </body>
