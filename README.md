@@ -7,6 +7,8 @@
 #Member : 1 Game Designer, 3 Programmer <br>
 #Production Period : 2018/09/07<br>
 #Publish : (Under Developement)<br>
+#Engin : Unity3D
+#Language : C#
 </article>
 
 <body>
