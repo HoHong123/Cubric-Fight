@@ -7,7 +7,7 @@
   <b>#Member :</b> 1 Game Designer, 3 Programmer <br>
   <b>#Production Period :</b> 2018/09/07<br>
   <b>#Publish :</b> None<br>
-  <b>#Engin :</b> Unity3D
+  <b>#Engin :</b> Unity3D<br>
   <b>#Language :</b> C#
 </article>
 
