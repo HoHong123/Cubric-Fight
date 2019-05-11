@@ -61,26 +61,22 @@ public class LazerAttackRange : MonoBehaviour {
 
 	if (m_SR.color.a < 1 && fade)
 	{
-	lerp += Time.deltaTime; // 1초간 색이 진해짐
+	    lerp += Time.deltaTime; // 1초간 색이 진해짐
+	    color.a = Mathf.Lerp(0, 1, lerp);
+	    m_SR.color = color;
 
-	color.a = Mathf.Lerp(0, 1, lerp);
-
-	m_SR.color = color;
-
-	if (m_SR.color.a >= 1)
-	{
-	    fade = false;
-	    lerp = 0;
-	    color.a = 1;
-	}
-	}
-	else if (!fade)
-	{
-	lerp += Time.deltaTime; // 1초간 색이 옅어짐
-
-	color.a = Mathf.Lerp(1, 0, lerp);
-
-	m_SR.color = color;
+	    if (m_SR.color.a >= 1)
+	    {
+	        fade = false;
+	        lerp = 0;
+	        color.a = 1;
+	    }
+	    else if (!fade)
+	    {
+	        lerp += Time.deltaTime; // 1초간 색이 옅어짐
+	        color.a = Mathf.Lerp(1, 0, lerp);
+	        m_SR.color = color;
+	    }
 	}
     }
 
