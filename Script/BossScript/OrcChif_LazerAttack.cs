@@ -36,6 +36,8 @@ public class OrcChif_LazerAttack : State<OrcChif_AI>
         m_AttackPosition = new List<Transform>();
     }
 
+    /// 쿨타임이 다되면 플레이어 캐릭터 중 하나 이상 근접 범위 밖이라면
+    /// 해당 캐릭터들 중 랜덤으로 하나의 캐릭터에 원거리 공격 실시
     public override void UpdateState(OrcChif_AI owner)
     {
         if (m_LazerCoolDown < 0)
