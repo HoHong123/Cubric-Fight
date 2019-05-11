@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+/*
+    근접 범위 내에 플레이어 캐릭터가 존재하면
+    보스가 캐릭터의 방향으로 회전하여 범위 공격
+    
+    다수의 캐릭터가 근접 범위에 존재하면
+    하나를 랜덤으로 선택하여 범위 공격
+*/
+
 public class OrcChif_AxeAttack : State<OrcChif_AI>
 {
     private static OrcChif_AxeAttack m_Instance; // 해당 클래스 객체
