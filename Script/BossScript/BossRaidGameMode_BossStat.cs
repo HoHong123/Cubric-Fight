@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    설명
+    - 보스가 가추어야하는 기본적 스텟과 함수를 선언하는 추상 클래스
+    
+    목표
+    - 추가적으로 보스 생성 시, 이 클래스를 통해 빠르고 쉽게 생성 가능하도록 하는 것이 목표
+*/
 
 public abstract class BossRaidGameMode_BossStat : MonoBehaviour
 {
@@ -62,6 +69,7 @@ public abstract class BossRaidGameMode_BossStat : MonoBehaviour
         m_FightManager = GameObject.Find("GameSystem").GetComponent<ChessFightManage>();
     }
 
+    // 플레이어의 캐릭터들이 생존하는지 확인
     protected virtual void Update()
     {
         for (int i = 0; i < m_Chesses.Count; i++) // 매번 남은 체스의 수를 확인
@@ -73,13 +81,15 @@ public abstract class BossRaidGameMode_BossStat : MonoBehaviour
         }
     }
 
-    public virtual void TakenDamage(int damageInput) // 데미지를 입을때 발동되는 가상함수, 재정의 가능
+    // 데미지를 입을때 발동되는 가상함수, 재정의 가능
+    public virtual void TakenDamage(int damageInput) 
     {
         SetHealth -= damageInput;
         
         StartCoroutine("BossFadeToRed");
     }
-
+    
+    // 보스 피격 후 색상을 붉게 변경 후 돌아오게 하는 함수
     private IEnumerator BossFadeToRed()
     {
         Color color = new Color(1.0f, 0, 0);
@@ -94,7 +104,7 @@ public abstract class BossRaidGameMode_BossStat : MonoBehaviour
         }
 
         m_Skin.color = new Color(1, 1, 1);
-    } // 보스의 색상 붉게 변경 후 돌아오는 함수
+    } 
 
     public abstract void Death(); // 죽을때 발동되는 추상 함수, 상속받는 자식 스크립에서 정의해야함
 }
