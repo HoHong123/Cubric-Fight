@@ -1,14 +1,14 @@
 # Cubric Fight!
 **************************************************************************************************************
 <article>
-#Team : Team.Cube<br>
-#Game Title : Cubric Fight!<br>
-#Genre : 3D strategy action board game<br>
-#Member : 1 Game Designer, 3 Programmer <br>
-#Production Period : 2018/09/07<br>
-#Publish : None<br>
-#Engin : Unity3D
-#Language : C#
+  <b>#Team :</b> Team.Cube<br>
+  <b>#Game Title :</b> Cubric Fight!<br>
+  <b>#Genre :</b> 3D strategy action board game<br>
+  <b>#Member :</b> 1 Game Designer, 3 Programmer <br>
+  <b>#Production Period :</b> 2018/09/07<br>
+  <b>#Publish :</b> None<br>
+  <b>#Engin :</b> Unity3D
+  <b>#Language :</b> C#
 </article>
 
 <body>
