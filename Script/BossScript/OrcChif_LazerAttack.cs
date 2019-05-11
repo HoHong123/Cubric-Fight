@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+/*
+    근접 범위 밖에 존재하는 캐릭터를 무작위로 선택하여 공격
+    
+    1. 가로 공격
+        - 선택된 캐릭터를 기준으로 맵을 가로로 가로지르는 범위 공격 실시
+    2. 세로 공격
+        - 선택된 캐릭터를 기준으로 맵을 세로로 가로지르는 범위 공격 
+*/
+
 public class OrcChif_LazerAttack : State<OrcChif_AI>
 {
     private static OrcChif_LazerAttack _instance; // 해당 클래스 객체
