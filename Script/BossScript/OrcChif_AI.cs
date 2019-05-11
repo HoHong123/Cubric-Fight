@@ -10,6 +10,12 @@ public enum OrcChifState
     Dead
 }
 
+/*
+    BossRaidGameMode_BossState를 상속
+    
+    각 행동을 BossMachine를 통해 변경
+*/
+
 public class OrcChif_AI : BossRaidGameMode_BossStat
 {
     [HideInInspector] public BossMachine<OrcChif_AI> m_StateMachine;
@@ -105,6 +111,7 @@ public class OrcChif_AI : BossRaidGameMode_BossStat
         m_StateMachine.Update();
 
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
