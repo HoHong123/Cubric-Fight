@@ -6,7 +6,7 @@
 #Genre : 3D strategy action board game<br>
 #Member : 1 Game Designer, 3 Programmer <br>
 #Production Period : 2018/09/07<br>
-#Publish : (Under Developement)<br>
+#Publish : None<br>
 #Engin : Unity3D
 #Language : C#
 </article>
