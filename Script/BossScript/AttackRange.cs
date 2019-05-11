@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    보스가 원거리 공격을 하면 발생하는 공격 범위의 알파 값을 변경하는 클래스
+*/
+
 public class AttackRange : MonoBehaviour {
 
     private SpriteRenderer m_SR;
@@ -17,7 +21,7 @@ public class AttackRange : MonoBehaviour {
         lerp = 0;
         fade = true;
     }
-
+    
     private void Update()
     {
         if (m_SR.color.a < 1 && fade)
