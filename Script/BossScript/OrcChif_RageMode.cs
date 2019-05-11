@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    5개의 운석을 맵 전역에 소환
+    
+    !. 첫 운석은 플레이어 캐릭터 중 하나를 선택하여 소환
+    !. 나머지 4개의 운석은 맵 전역을 통해 랜덤한 위치에 소환
+    !. 운석끼리 겹치지 않는 위치에 소환
+    !. 원형 타이머를 통해 운석이 충돌하기까지 시간을 표시
+    !. 플레이어 캐릭터가 공격을 받으면 운석을 중심으로 반대편 방향으로 밀어낸다.
+*/
+
 public class OrcChif_RageMode : State<OrcChif_AI>
 {
     private static OrcChif_RageMode m_Instance; // 해당 클래스 객체
