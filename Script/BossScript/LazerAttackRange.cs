@@ -47,7 +47,7 @@ public class LazerAttackRange : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-		if(m_Timer < 0)
+	if(m_Timer < 0)
         {           
             // 1초뒤 제거되는 프리팹 생성, 해당 객체보다 y축 2 위에 생성
             Destroy(Instantiate(m_LazerPrefab, transform.position + m_Pos, Quaternion.Euler(0, m_YAxis, 0)), 1.0f);
@@ -55,36 +55,37 @@ public class LazerAttackRange : MonoBehaviour {
             BoxRangeCheck();
 
             enabled = false;
-        } else
-        {
-            m_Timer -= Time.deltaTime;
+        } 
+	
+	m_Timer -= Time.deltaTime;
 
-            if (m_SR.color.a < 1 && fade)
-            {
-                lerp += Time.deltaTime; // 1초간 색이 진해짐
+	if (m_SR.color.a < 1 && fade)
+	{
+	lerp += Time.deltaTime; // 1초간 색이 진해짐
 
-                color.a = Mathf.Lerp(0, 1, lerp);
+	color.a = Mathf.Lerp(0, 1, lerp);
 
-                m_SR.color = color;
+	m_SR.color = color;
 
-                if (m_SR.color.a >= 1)
-                {
-                    fade = false;
-                    lerp = 0;
-                    color.a = 1;
-                }
-            }
-            else if (!fade)
-            {
-                lerp += Time.deltaTime; // 1초간 색이 옅어짐
-
-                color.a = Mathf.Lerp(1, 0, lerp);
-
-                m_SR.color = color;
-            }
-        }
+	if (m_SR.color.a >= 1)
+	{
+	    fade = false;
+	    lerp = 0;
+	    color.a = 1;
 	}
+	}
+	else if (!fade)
+	{
+	lerp += Time.deltaTime; // 1초간 색이 옅어짐
 
+	color.a = Mathf.Lerp(1, 0, lerp);
+
+	m_SR.color = color;
+	}
+    }
+
+    /// Physics를 활용해 플레이어 캐릭터가 타격 받는지 확인하는 함수
+    /// 특정 프레임에만 발동하기 위해 작성한 함수
     private void BoxRangeCheck()
     {
         Collider[] chess = Physics.OverlapBox(transform.position, m_CheckRange);
