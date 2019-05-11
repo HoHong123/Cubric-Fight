@@ -4,10 +4,9 @@ using System.Collections.Generic;
 /*
     근접 범위 밖에 존재하는 캐릭터를 무작위로 선택하여 공격
     
-    1. 가로 공격
-        - 선택된 캐릭터를 기준으로 맵을 가로로 가로지르는 범위 공격 실시
-    2. 세로 공격
-        - 선택된 캐릭터를 기준으로 맵을 세로로 가로지르는 범위 공격 
+    !. 쿨타임이 되면 근접 범위 밖에 존재하는 캐릭터를 확인하여 공격 실행
+    !. 가로 공격 : 선택된 캐릭터를 기준으로 맵을 가로로 가로지르는 범위 공격 실시
+    !. 세로 공격 : 선택된 캐릭터를 기준으로 맵을 세로로 가로지르는 범위 공격 
 */
 
 public class OrcChif_LazerAttack : State<OrcChif_AI>
@@ -77,7 +76,6 @@ public class OrcChif_LazerAttack : State<OrcChif_AI>
                         break;
 
                     case 2: // 세로
-                    case 3:
                         v = new Vector3(m_AttackPosition[i].transform.position.x, 1.28f, 0);
                         Destroy(Instantiate( owner.m_VerticalPrefab, v, Quaternion.Euler(0, 90, 0)), 4.0f);
                         break;
